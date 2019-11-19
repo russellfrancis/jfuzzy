@@ -27,6 +27,9 @@ import java.io.InputStream;
  * native implementation provided by libfuzzy.so.
  */
 public class JFuzzy {
+  // Prevent construction, all methods are static.
+  private JFuzzy() {}
+
   static private final int BUFFER_SIZE = 8192;
 
   // Define the native methods provided by libjfuzzy.so.
