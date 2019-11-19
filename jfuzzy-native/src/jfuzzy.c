@@ -98,7 +98,7 @@ JNIEXPORT jlong JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1new(JNIEnv *env, j
   if (state == NULL) {
     (*env)->ThrowNew(env, outofmemoryErrorKlass, "Unable to allocate memory for a new fuzzy_state structure.");
   }
-  return state;
+  return (jlong) state;
 }
 
 /*
