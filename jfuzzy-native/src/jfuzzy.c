@@ -19,7 +19,7 @@
 #include <jni.h>
 #include <stdlib.h>
 #include <fuzzy.h>
-#include "us_ideasaur_jfuzzy_JFuzzy.h"
+#include "io_github_russellfrancis_jfuzzy_JFuzzy.h"
 
 // Maintain a global reference to the java.lang.RuntimeException class for generating exceptions.
 jclass runtimeExceptionKlass = NULL;
@@ -93,7 +93,7 @@ void JNI_OnUnload(JavaVM *vm, void *reserved) {
  * @throws An OutOfMemoryError may be thrown if we are unable to allocate sufficient memory to
  * store the fuzzy_state data.
  */
-JNIEXPORT jlong JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1new(JNIEnv *env, jobject jfuzzy) {
+JNIEXPORT jlong JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1new(JNIEnv *env, jobject jfuzzy) {
   struct fuzzy_state *state = fuzzy_new();
   if (state == NULL) {
     (*env)->ThrowNew(env, outofmemoryErrorKlass, "Unable to allocate memory for a new fuzzy_state structure.");
@@ -108,7 +108,7 @@ JNIEXPORT jlong JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1new(JNIEnv *env, j
  * @param jfuzzy A reference to the JFuzzy class instance which invoked this method.
  * @param fuzzy_state_ptr A pointer to the fuzzy_state structure, casted to a long.
  */
-JNIEXPORT void JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1free(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr) {
+JNIEXPORT void JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1free(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr) {
   fuzzy_free((struct fuzzy_state *)fuzzy_state_ptr);
 }
 
@@ -123,7 +123,7 @@ JNIEXPORT void JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1free(JNIEnv *env, j
  * of zero indicates the signatures did not match.  A score of 100 indicates a perfect match.
  * @throws RuntimeException if there is an error comparing the signatures.
  */
-JNIEXPORT int JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1compare(JNIEnv *env, jobject jfuzzy, jstring sig1, jstring sig2) {
+JNIEXPORT int JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1compare(JNIEnv *env, jobject jfuzzy, jstring sig1, jstring sig2) {
   const char *cstrSig1 = (*env)->GetStringUTFChars(env, sig1, NULL);
   if ((*env)->ExceptionCheck(env)) {
     return -1;
@@ -154,7 +154,7 @@ JNIEXPORT int JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1compare(JNIEnv *env,
  * @param byteArray A java byte[] containing data we wish to include in the fuzzy hash.
  * @param length The length from index 0 of bytes in the array we wish to include in the hash.
  */
-JNIEXPORT void JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1update(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr, jbyteArray byteArray, jint length) {
+JNIEXPORT void JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1update(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr, jbyteArray byteArray, jint length) {
   uint8_t* buf = (uint8_t*)(*env)->GetByteArrayElements(env, byteArray, NULL);
   if ((*env)->ExceptionCheck(env)) {
     return;
@@ -182,7 +182,7 @@ JNIEXPORT void JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1update(JNIEnv *env,
  * @throws OutOfMemoryError if there is an issue allocating memory to store the digest.
  * @throws RuntimeException if there are other issues computing the digest.
  */
-JNIEXPORT jstring JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1digest(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr, jboolean flag_eliminate_sequences, jboolean flag_no_truncate) {
+JNIEXPORT jstring JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1digest(JNIEnv *env, jobject jfuzzy, jlong fuzzy_state_ptr, jboolean flag_eliminate_sequences, jboolean flag_no_truncate) {
   unsigned int flags = 0;
   flags |= flag_eliminate_sequences == JNI_TRUE ? FUZZY_FLAG_ELIMSEQ : 0;
   flags |= flag_no_truncate == JNI_TRUE ? FUZZY_FLAG_NOTRUNC : 0;
@@ -219,7 +219,7 @@ JNIEXPORT jstring JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1digest(JNIEnv *e
  * @throws OutOfMemoryError if there is an issue allocating memory to store the digest.
  * @throws RuntimeException if there are other issues computing the digest.
  */
-JNIEXPORT jstring JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1hash_1buf(JNIEnv *env, jobject jfuzzy, jbyteArray byteArray) {
+JNIEXPORT jstring JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1hash_1buf(JNIEnv *env, jobject jfuzzy, jbyteArray byteArray) {
   jstring hash;
 
   // Get the length of the byte[]
@@ -268,7 +268,7 @@ JNIEXPORT jstring JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1hash_1buf(JNIEnv
  * @throws OutOfMemoryError if there is an issue allocating memory to store the digest.
  * @throws RuntimeException if there are other issues computing the digest.
  */
-JNIEXPORT jstring JNICALL Java_us_ideasaur_jfuzzy_JFuzzy_fuzzy_1hash_1file(JNIEnv *env, jobject jfuzzy, jstring filename) {
+JNIEXPORT jstring JNICALL Java_io_github_russellfrancis_jfuzzy_JFuzzy_fuzzy_1hash_1file(JNIEnv *env, jobject jfuzzy, jstring filename) {
   const char *cstrFilename = (*env)->GetStringUTFChars(env, filename, NULL);
   if ((*env)->ExceptionCheck(env)) {
     return NULL;

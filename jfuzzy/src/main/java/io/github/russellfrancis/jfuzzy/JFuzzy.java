@@ -1,4 +1,4 @@
-package us.ideasaur.jfuzzy;
+package io.github.russellfrancis.jfuzzy;
 /*
  * JNI bindings for the libfuzzy shared library.
  * Copyright (C) 2019 Russell Francis
