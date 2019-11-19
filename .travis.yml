@@ -1,4 +1,6 @@
 language: java
 os: linux
+before_install:
+  - sudo apt-get -y install libfuzzy-dev
 script:
   - jdk_switcher use openjdk8
