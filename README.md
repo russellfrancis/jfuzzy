@@ -1,2 +1,2 @@
-# jssdeep
-JNI bindings for the libssdeep shared library, allowing efficient execution of functions from libssdeep from within native Java applications.
+# jfuzzy
+JNI bindings for the libfuzzy shared library, allowing efficient computation and comparison of ssdeep hashes from within Java applications.
