@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>us.ideasaur</groupId>
+    <artifactId>jfuzzy-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>jfuzzy-native-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>jfuzzy-native-parent</name>
+  <packaging>pom</packaging>
+
+  <profiles>
+    <profile>
+      <id>linux</id>
+      <activation>
+        <os>
+          <family>linux</family>
+        </os>
+      </activation>
+      <properties>
+        <native.library.path>/usr/lib:/usr/local/lib:${basedir}/../jfuzzy-native/linux/target</native.library.path>
+      </properties>
+      <modules>
+        <module>linux</module>
+      </modules>
+    </profile>
+  </profiles>
+
+</project>
