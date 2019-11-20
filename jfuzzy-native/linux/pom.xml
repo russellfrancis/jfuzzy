@@ -3,22 +3,22 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>us.ideasaur</groupId>
+    <groupId>io.github.russellfrancis</groupId>
     <artifactId>jfuzzy-native-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>libjfuzzy</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>libjfuzzy.so</name>
   <packaging>so</packaging>
 
   <dependencies>
     <dependency>
-      <groupId>us.ideasaur</groupId>
+      <groupId>io.github.russellfrancis</groupId>
       <artifactId>jfuzzy</artifactId>
-      <version>1.0.1-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
