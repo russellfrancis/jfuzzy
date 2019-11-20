@@ -7,12 +7,12 @@
   <parent>
     <groupId>us.ideasaur</groupId>
     <artifactId>jfuzzy-native-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <relativePath>../jfuzzy-native/pom.xml</relativePath>
   </parent>
 
   <artifactId>jfuzzy-test</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <name>jfuzzy-test.jar</name>
   <packaging>jar</packaging>
 
@@ -20,7 +20,7 @@
     <dependency>
       <groupId>us.ideasaur</groupId>
       <artifactId>jfuzzy</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
 
     <dependency>
