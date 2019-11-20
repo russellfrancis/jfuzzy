@@ -3,6 +3,7 @@
 .idea
 target
 release.properties
+RELEASE.md
 
 # Compiled class file
 *.class
