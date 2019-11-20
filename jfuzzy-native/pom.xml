@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.russellfrancis</groupId>
     <artifactId>jfuzzy-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>jfuzzy-native-parent</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy-native-parent</name>
   <packaging>pom</packaging>
 
