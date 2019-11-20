@@ -5,11 +5,11 @@
   <parent>
     <groupId>io.github.russellfrancis</groupId>
     <artifactId>jfuzzy-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>jfuzzy</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy.jar</name>
 
   <build>
