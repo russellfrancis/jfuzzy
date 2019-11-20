@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.russellfrancis</groupId>
     <artifactId>jfuzzy-native-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>libjfuzzy</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>libjfuzzy.so</name>
   <packaging>so</packaging>
 
@@ -18,7 +18,7 @@
     <dependency>
       <groupId>io.github.russellfrancis</groupId>
       <artifactId>jfuzzy</artifactId>
-      <version>1.0.1-SNAPSHOT</version>
+      <version>1.0.0</version>
       <type>jar</type>
       <scope>compile</scope>
     </dependency>
