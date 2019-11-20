@@ -11,6 +11,7 @@
   <artifactId>jfuzzy</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy.jar</name>
+  <description>The Java portion of the JNI bindings for libfuzzy.</description>
 
   <build>
     <plugins>

@@ -12,6 +12,7 @@
   <artifactId>jfuzzy-native-parent</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy-native-parent</name>
+  <description>The native parent pom for the libfuzzy JNI bindings.</description>
   <packaging>pom</packaging>
 
   <profiles>

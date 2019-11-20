@@ -12,6 +12,7 @@
   <artifactId>jfuzzy-test</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy-test.jar</name>
+  <description>Test cases for the jfuzzy JNI bindings.</description>
   <packaging>jar</packaging>
 
   <dependencies>

@@ -6,6 +6,7 @@
   <artifactId>jfuzzy-parent</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>jfuzzy-parent</name>
+  <description>JNI bindings for the libfuzzy shared library, allowing efficient computation and comparison of ssdeep hashes from within Java applications.</description>
 
   <packaging>pom</packaging>
 

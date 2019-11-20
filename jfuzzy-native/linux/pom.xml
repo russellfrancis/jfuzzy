@@ -12,6 +12,7 @@
   <artifactId>libjfuzzy</artifactId>
   <version>1.0.1-SNAPSHOT</version>
   <name>libjfuzzy.so</name>
+  <description>The native library libjfuzzy.so allowing calling into libfuzzy.so from Java.</description>
   <packaging>so</packaging>
 
   <dependencies>
