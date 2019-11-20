@@ -5,12 +5,12 @@
   <parent>
     <groupId>io.github.russellfrancis</groupId>
     <artifactId>jfuzzy-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>jfuzzy-native-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>jfuzzy-native-parent</name>
   <description>The native parent pom for the libfuzzy JNI bindings.</description>
   <packaging>pom</packaging>

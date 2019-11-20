@@ -4,7 +4,7 @@
 
   <groupId>io.github.russellfrancis</groupId>
   <artifactId>jfuzzy-parent</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>jfuzzy-parent</name>
   <description>JNI bindings for the libfuzzy shared library, allowing efficient computation and comparison of ssdeep hashes from within Java applications.</description>
 
@@ -49,7 +49,7 @@
     <connection>scm:git:git@github.com:russellfrancis/jfuzzy.git</connection>
     <developerConnection>scm:git:git@github.com:russellfrancis/jfuzzy.git</developerConnection>
     <url>https://github.com/russellfrancis/jfuzzy</url>
-    <tag>HEAD</tag>
+    <tag>jfuzzy-parent-1.0.0</tag>
   </scm>
 
   <issueManagement>
